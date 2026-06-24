@@ -36,16 +36,16 @@ T-AGENT PRO mirrors how a real trading desk works — but with LLM-powered agent
 
 ## Features
 
-| | Feature | Description |
-|---|---------|-------------|
-|   | **Multi-Agent Pipeline** | Fundamental, technical & sentiment analysts run in parallel |
-|   | **Bull vs Bear Debate** | Researchers argue both sides before any decision |
-|   | **Risk Manager** | Blocks trades on extreme sentiment or high risk |
-|   | **Trading Personas** | Buffett value, WSB degen, quant, or balanced manager |
-|   | **Live Dashboard** | WebSocket feed, P&L chart, decision archive, backtest tab |
-|   | **Portfolio Simulation** | Position limits, cash reserve, stop-loss, broker fees |
-|   | **7-Day Backtest** | ROI analysis on every logged BUY/SELL decision |
-|   | **CLI + API** | Terminal analysis or programmatic integration |
+| Feature | Description |
+|---------|-------------|
+| **Multi-Agent Pipeline** | Fundamental, technical, and sentiment analysts run in parallel |
+| **Bull vs Bear Debate** | Researchers evaluate both sides before any decision |
+| **Risk Manager** | Blocks trades on extreme sentiment or elevated risk |
+| **Trading Personas** | Value, momentum, quant, or balanced portfolio manager profiles |
+| **Live Dashboard** | WebSocket feed, P&L chart, decision archive, and backtest tab |
+| **Portfolio Simulation** | Position limits, cash reserve, stop-loss, and broker fees |
+| **7-Day Backtest** | ROI analysis on every logged BUY/SELL decision |
+| **CLI and API** | Terminal analysis or programmatic integration |
 
 ## Architecture
 
@@ -60,40 +60,40 @@ See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full technical breakdow
 ```
 MyTradingAgents/
 │
-├── 📄 main.py                  # CLI entry point
-├── 📄 serve.py                 # API server entry point
-├── 📄 pyproject.toml           # Package config & scripts
-├── 📄 docker-compose.yml       # Container orchestration
+├── main.py                  # CLI entry point
+├── serve.py                 # API server entry point
+├── pyproject.toml           # Package config and scripts
+├── docker-compose.yml       # Container orchestration
 │
-├── 📁 apps/
-│   └── web/                    # React + Vite dashboard (port 5173)
-│       ├── src/App.jsx         # P&L chart, backtest tab, live feed
-│       └── vite.config.js      # API/WebSocket proxy
+├── apps/
+│   └── web/                 # React + Vite dashboard (port 5173)
+│       ├── src/App.jsx      # P&L chart, backtest tab, live feed
+│       └── vite.config.js   # API/WebSocket proxy
 │
-├── 📁 src/                     # Python backend package
-│   ├── agents/                 # LLM analyst & decision-maker chains
-│   ├── graph/                  # LangGraph orchestrator
-│   ├── data/                   # Market data fetchers & decision logger
-│   ├── api.py                  # FastAPI routes + WebSocket
-│   ├── cli.py                  # Rich terminal interface
-│   ├── portfolio.py            # Simulated brokerage engine
-│   ├── backtest.py             # 7-day ROI backtest engine
-│   ├── config.py               # Environment & LLM provider config
-│   └── state.py                # LangGraph state schema
+├── src/                     # Python backend package
+│   ├── agents/              # LLM analyst and decision-maker chains
+│   ├── graph/               # LangGraph orchestrator
+│   ├── data/                # Market data fetchers and decision logger
+│   ├── api.py               # FastAPI routes and WebSocket
+│   ├── cli.py               # Rich terminal interface
+│   ├── portfolio.py         # Simulated brokerage engine
+│   ├── backtest.py          # 7-day ROI backtest engine
+│   ├── config.py            # Environment and LLM provider config
+│   └── state.py             # LangGraph state schema
 │
-├── 📁 docs/
-│   ├── ARCHITECTURE.md         # Technical deep-dive
-│   └── assets/                 # README diagrams (SVG)
+├── docs/
+│   ├── ARCHITECTURE.md      # Technical deep-dive
+│   └── assets/              # README diagrams (SVG)
 │
-├── 📁 storage/
-│   └── logs/                   # Runtime data (portfolio, decisions)
+├── storage/
+│   └── logs/                # Runtime data (portfolio, decisions)
 │
-├── 📁 scripts/
-│   └── start.ps1               # Launch API + dashboard (Windows)
+├── scripts/
+│   └── start.ps1            # Launch API and dashboard (Windows)
 │
-└── 📁 tests/
-    ├── test_portfolio.py       # Portfolio rule unit tests
-    └── test_backtest.py        # Backtest logic unit tests
+└── tests/
+    ├── test_portfolio.py    # Portfolio rule unit tests
+    └── test_backtest.py     # Backtest logic unit tests
 ```
 
 ## Quick Start
@@ -107,8 +107,8 @@ MyTradingAgents/
 ### Install
 
 ```bash
-git clone <your-repo>
-cd MyTradingAgents
+git clone https://github.com/achrafS133/T-agent.git
+cd T-agent
 
 python -m venv venv
 venv\Scripts\activate        # Windows
@@ -162,7 +162,7 @@ pip install -e ".[dev]" && pytest   # 18 unit tests
 | `OLLAMA_BASE_URL` | `http://localhost:11434` | Local Ollama server |
 | `OLLAMA_MODEL` | `qwen2.5` | Local model name |
 | `INITIAL_CASH` | `100000` | Simulated starting capital |
-| `LOG_DIR` | `storage/logs` | Portfolio & decision storage |
+| `LOG_DIR` | `storage/logs` | Portfolio and decision storage |
 | `API_PORT` | `8000` | API server port |
 
 ## Personas
@@ -178,7 +178,7 @@ pip install -e ".[dev]" && pytest   # 18 unit tests
 
 | Method | Endpoint | Description |
 |--------|----------|-------------|
-| `GET` | `/api/health` | Server & LLM status |
+| `GET` | `/api/health` | Server and LLM status |
 | `GET` | `/api/portfolio` | Simulated portfolio |
 | `GET` | `/api/portfolio/pnl-history` | P&L chart data |
 | `GET` | `/api/history` | Decision archive |
