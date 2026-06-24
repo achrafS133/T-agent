@@ -38,14 +38,14 @@ T-AGENT PRO mirrors how a real trading desk works — but with LLM-powered agent
 
 | | Feature | Description |
 |---|---------|-------------|
-| 🧠 | **Multi-Agent Pipeline** | Fundamental, technical & sentiment analysts run in parallel |
-| ⚔️ | **Bull vs Bear Debate** | Researchers argue both sides before any decision |
-| 🛡️ | **Risk Manager** | Blocks trades on extreme sentiment or high risk |
-| 🎭 | **Trading Personas** | Buffett value, WSB degen, quant, or balanced manager |
-| 📊 | **Live Dashboard** | WebSocket feed, P&L chart, decision archive, backtest tab |
-| 💼 | **Portfolio Simulation** | Position limits, cash reserve, stop-loss, broker fees |
-| 📈 | **7-Day Backtest** | ROI analysis on every logged BUY/SELL decision |
-| 🖥️ | **CLI + API** | Terminal analysis or programmatic integration |
+|   | **Multi-Agent Pipeline** | Fundamental, technical & sentiment analysts run in parallel |
+|   | **Bull vs Bear Debate** | Researchers argue both sides before any decision |
+|   | **Risk Manager** | Blocks trades on extreme sentiment or high risk |
+|   | **Trading Personas** | Buffett value, WSB degen, quant, or balanced manager |
+|   | **Live Dashboard** | WebSocket feed, P&L chart, decision archive, backtest tab |
+|   | **Portfolio Simulation** | Position limits, cash reserve, stop-loss, broker fees |
+|   | **7-Day Backtest** | ROI analysis on every logged BUY/SELL decision |
+|   | **CLI + API** | Terminal analysis or programmatic integration |
 
 ## Architecture
 
