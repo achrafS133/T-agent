@@ -1,0 +1,40 @@
+# Environment
+.env
+.venv
+venv/
+env/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+dist/
+build/
+.eggs/
+
+# Project artefacts
+storage/logs/*
+!storage/logs/.gitkeep
+node_modules/
+*.sqlite
+*.sqlite3
+*.sqlite-shm
+*.sqlite-wal
+checkpoints.sqlite
+
+# IDE
+.idea/
+.vscode/
+.pytest_cache/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Stray outputs
+out*.log
